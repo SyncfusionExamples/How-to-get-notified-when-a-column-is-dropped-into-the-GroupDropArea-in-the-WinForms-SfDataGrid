@@ -17,8 +17,6 @@ namespace WinformsDataGrid
         private string customerName;
         private string shippingCity;
 
-       
-
         public string OrderID
         {
             get => orderID;
@@ -105,5 +103,4 @@ namespace WinformsDataGrid
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
-
 }
