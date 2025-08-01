@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -27,10 +28,12 @@ namespace WinformsDataGrid
             orderInfoCollection = new OrderInfoCollection();
             sfDataGrid1.DataSource = orderInfoCollection.Orders;
             sfDataGrid1.ShowGroupDropArea = true;
+            //Event subscription
             sfDataGrid1.GroupColumnDescriptions.CollectionChanged += GroupColumnDescriptions_CollectionChanged;
         }
 
-        private void GroupColumnDescriptions_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        //Event customization
+        private void GroupColumnDescriptions_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add)
             {
