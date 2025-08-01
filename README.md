@@ -18,4 +18,5 @@ private void GroupColumnDescriptions_CollectionChanged(object sender, NotifyColl
     }
 }
  ```
+ 
 Take a moment to peruse the [WinForms DataGrid - Grouping](https://help.syncfusion.com/windowsforms/datagrid/grouping) documentation, where you can find about the grouping with code examples.
