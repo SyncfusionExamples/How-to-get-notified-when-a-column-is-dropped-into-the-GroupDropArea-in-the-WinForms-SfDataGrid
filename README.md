@@ -2,7 +2,11 @@
 
 In [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) (SfDataGrid), to get notified when a column is added or removed in the grouping box area, the `CollectionChanged` event of the [GroupColumnDescriptions](https://help.syncfusion.com/cr/windowsforms/Syncfusion.WinForms.DataGrid.SfDataGrid.html#Syncfusion_WinForms_DataGrid_SfDataGrid_GroupColumnDescriptions) property can be used. This event allows for detection when columns are added or removed from the drop area, as well as identification of the action performed.
  
- ```csharp
+  ```csharp
+//Event subscription
+sfDataGrid1.GroupColumnDescriptions.CollectionChanged += GroupColumnDescriptions_CollectionChanged;
+
+//Event customization
 private void GroupColumnDescriptions_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
 {
     if (e.Action == NotifyCollectionChangedAction.Add)
